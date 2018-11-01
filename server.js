@@ -53,6 +53,7 @@ const template = function(
     <script>window.__initialState__ = ${JSON.stringify(initialState)}</script>
     <script src="https://vast-fortress-96596.herokuapp.com/client.js"></script>
     <script src="http://18.219.227.74/bundle.js"></script>
+   
   </body>
   
   </html>
