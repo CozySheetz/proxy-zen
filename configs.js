@@ -1,5 +1,5 @@
 const localHost = `http://localhost:3001`;
-const cloudHost = `https://vast-fortress-96596.herokuapp.com`;
+const cloudHost = `https://mysterious-earth-97891.herokuapp.com`;
 
 export const host = process.env.NODE_ENV === 'development'
 ? localHost
