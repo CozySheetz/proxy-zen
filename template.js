@@ -10,6 +10,7 @@ const scripts = services.map(
 export const template = function(
   initialState = {},
   navHtml = '',
+  descriptionHtml = '',
   galleryHtml = '',
   relatedListingsHtml = ''
 ) {
@@ -40,6 +41,7 @@ export const template = function(
     <div id="root">
       <div id="nav-app">${navHtml}</div>
       <div id="gallery-app">${galleryHtml}</div>
+      <div id="description-app">${descriptionHtml}</div>
       <div id="booker-app"></div>
       <div id="reviews-app"></div>
       <div id="related-listings-app">${relatedListingsHtml}</div>
