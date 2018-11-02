@@ -21,8 +21,8 @@ proxy.get('/rooms/:id', function(req, res) {
   const id = req.params.id;
   axios
     .get(`${host}/getRoom/${id}`)
-    .then(({ data: { initialState, content_one, content_two } }) => {
-      const html = template(initialState, content_one, content_two);
+    .then(({ data: { initialState, nav, gallery, relatedListings } }) => {
+      const html = template(initialState, nav, gallery, relatedListings);
       res.status(200).send(html);
     }).catch(e => console.log('there is an error!', e))
 });

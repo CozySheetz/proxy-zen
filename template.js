@@ -1,16 +1,17 @@
 import { host, services } from './configs';
 
 const styles = services.map(
-  ({ name, url }) => `<link rel="stylesheet" href="${url}style.css />`
+  ({ name, url }) => `<link rel="stylesheet" href="${url}style.css" />`
 );
 const scripts = services.map(
-  ({ name, url }) => `<script src="${url}bundle.js />`
+  ({ name, url }) => `<script src="${url}bundle.js"></script>`
 );
 
 export const template = function(
   initialState = {},
-  content_one = '',
-  content_two = ''
+  navHtml = '',
+  galleryHtml = '',
+  relatedListingsHtml = ''
 ) {
   return `
   <!DOCTYPE html>
@@ -37,10 +38,11 @@ export const template = function(
   
   <body>
     <div id="root">
-      <div id="gallery-app">${content_one}</div>
+      <div id="nav-app">${navHtml}</div>
+      <div id="gallery-app">${galleryHtml}</div>
       <div id="booker-app"></div>
       <div id="reviews-app"></div>
-      <div id="related-listings-app">${content_two}</div>
+      <div id="related-listings-app">${relatedListingsHtml}</div>
     </div>
   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -58,7 +60,6 @@ export const template = function(
 
     <!-- scripts from other services --> 
     ${scripts.join('\n')}
-    <!-- scripts from other services --> 
 
   </body>
   </html>
