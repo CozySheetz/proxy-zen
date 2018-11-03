@@ -38,9 +38,9 @@ export const template = function(
     <div id="root">
       <div id="nav-app">${navHtml}</div>
       <div id="gallery-app">${galleryHtml}</div>
-      <div class="d-flex align-items-stretch justify-content-center">
-        <div class="w-50" id="description-app">${descriptionHtml}</div>
-        <div class="w-75 mt-3" id="booker-app"></div>
+      <div class="d-flex align-items-stretch justify-content-center container-fluid">
+        <div class="w-50 col-sm-7" id="description-app">${descriptionHtml}</div>
+        <div class="w-75 col-sm-5 mt-3" id="booker-app"></div>
       </div>
       
       <div id="reviews-app"></div>
