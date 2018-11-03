@@ -1,11 +1,7 @@
 import { host, services } from './configs';
 
-const styles = services.map(
-  ({ name, url }) => `<link rel="stylesheet" href="${url}style.css" />`
-);
-const scripts = services.map(
-  ({ name, url }) => `<script src="${url}bundle.js"></script>`
-);
+const styles = services.map(({styles}) => styles).join('\n');
+const scripts = services.map(({script}) => script).join('\n');
 
 export const template = function(
   initialState = {},
@@ -32,7 +28,7 @@ export const template = function(
     <link rel="stylesheet" href="${host}/styles.css" />
 
     <!-- styles from other services --> 
-    ${styles.join('\n')}
+    ${styles}
     <!-- styles from other services --> 
 
   </head>
@@ -61,7 +57,10 @@ export const template = function(
     <script src="${host}/client.js"></script>
 
     <!-- scripts from other services --> 
-    ${scripts.join('\n')}
+    ${scripts}
+
+    
+    <!-- scripts from other services --> 
 
   </body>
   </html>
