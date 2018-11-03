@@ -19,12 +19,13 @@ export const template = function(
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
       crossorigin="anonymous">
-    <title>FEC</title>
-    <base href="/" target="_blank">
 
+    <title>FEC</title>
+
+    <base href="/" target="_blank">
     <link rel="stylesheet" href="${host}/styles.css" />
 
     <!-- styles from other services --> 
@@ -37,8 +38,11 @@ export const template = function(
     <div id="root">
       <div id="nav-app">${navHtml}</div>
       <div id="gallery-app">${galleryHtml}</div>
-      <div id="description-app">${descriptionHtml}</div>
-      <div id="booker-app"></div>
+      <div class="d-flex align-items-stretch justify-content-center">
+        <div class="w-50" id="description-app">${descriptionHtml}</div>
+        <div class="w-75 mt-3" id="booker-app"></div>
+      </div>
+      
       <div id="reviews-app"></div>
       <div id="related-listings-app">${relatedListingsHtml}</div>
     </div>
@@ -58,8 +62,6 @@ export const template = function(
 
     <!-- scripts from other services --> 
     ${scripts}
-
-    
     <!-- scripts from other services --> 
 
   </body>

@@ -11,10 +11,10 @@ export const services = [
     styles: '<link rel="stylesheet" href="http://18.219.227.74/styles.css" />',
     script: '<script src="http://18.219.227.74/bundle.js"></script>'
   },
-  {
-    name: 'reviews',
-    url: 'http://18.224.94.179/',
-    styles: '<link rel="stylesheet" href="http://18.224.94.179/styles.css" />',
-    script: '<script src="http://18.224.94.179/bundle.js"></script>',
-  }
+  // {
+  //   name: 'reviews',
+  //   url: 'http://18.224.94.179/',
+  //   styles: '<link rel="stylesheet" href="http://18.224.94.179/styles.css" />',
+  //   script: '<script src="http://18.224.94.179/bundle.js"></script>',
+  // }
 ];
