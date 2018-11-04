@@ -21,11 +21,12 @@ proxy.get('/rooms/:id', function(req, res) {
     .get(`${host}/getRoom/${id}`)
     .then(
       ({
-        data: { initialState, nav, description, gallery, relatedListings }
+        data: { initialState, nav, modal, description, gallery, relatedListings }
       }) => {
         const html = template(
           initialState,
           nav,
+          modal,
           description,
           gallery,
           relatedListings

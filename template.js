@@ -6,6 +6,7 @@ const scripts = services.map(({script}) => script).join('\n');
 export const template = function(
   initialState = {},
   navHtml = '',
+  modalHtml = '',
   descriptionHtml = '',
   galleryHtml = '',
   relatedListingsHtml = ''
@@ -37,6 +38,7 @@ export const template = function(
   <body>
     <div id="root">
       <div id="nav-app">${navHtml}</div>
+      <div id="modal-app">${modalHtml}</div>
       <div id="gallery-app">${galleryHtml}</div>
       <div class="d-flex align-items-stretch justify-content-center container-fluid">
         <div class="w-50 col-sm-7" id="description-app">${descriptionHtml}</div>
